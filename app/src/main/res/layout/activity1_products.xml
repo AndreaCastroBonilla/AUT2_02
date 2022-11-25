@@ -14,7 +14,6 @@
         android:background="@color/white"
         android:numColumns="2"
         android:gravity="center">
-
     </GridView>
 
 </LinearLayout>
