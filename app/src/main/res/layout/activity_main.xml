@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|center_horizontal">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/productosButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:alpha="0.53"
+                    android:backgroundTint="@color/white"
+                    android:fontFamily="sans-serif-black"
+                    android:text="PRODUCTOS"
+                    android:textColor="@color/grey"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/cestaButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/productosButton"
+                    android:layout_centerHorizontal="true"
+                    android:alpha="0.53"
+                    android:backgroundTint="@color/white"
+                    android:fontFamily="sans-serif-black"
+                    android:text="CESTA"
+                    android:textColor="@color/grey"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/contactoButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cestaButton"
+                    android:layout_centerHorizontal="true"
+                    android:alpha="0.53"
+                    android:backgroundTint="@color/white"
+                    android:fontFamily="sans-serif-black"
+                    android:text="CONTACTO"
+                    android:textColor="@color/grey"
+                    android:textSize="24sp" />
+            </RelativeLayout>
+        </FrameLayout>
+
+        <ImageButton
+            android:id="@+id/aboutButton"
+            android:layout_width="75dp"
+            android:layout_height="64dp"
+            android:layout_gravity="right|top"
+            android:background="#00FFFFFF"
+            android:scrollbarThumbHorizontal="@drawable/about"
+            android:scrollbarThumbVertical="@drawable/about"
+            android:src="@drawable/about" />
+    </FrameLayout>
+</FrameLayout>
