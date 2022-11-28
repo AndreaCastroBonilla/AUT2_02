@@ -2,6 +2,7 @@ package com.example.aut2_02;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Adapter;
@@ -12,32 +13,24 @@ import java.util.ArrayList;
 
 public class Activity1_Products extends AppCompatActivity {
 
-    private GridView gridView;
-    private GridAdapter adapter;
+    GridView gridView;
+
+    String[] productName = {"uno","dos","tres","cuatro"};
+    int[] numberImage ={R.drawable.leone_shoes,R.drawable.nike_shoes,R.drawable.buddha_shorts,R.drawable.buddha_gloves};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity1_products);
 
-        ArrayList<String> arrayList = new ArrayList<>();
-        arrayList.add("prueba1");
-        arrayList.add("prueba2");
-        arrayList.add("prueba3");
-        arrayList.add("prueba4");
-        arrayList.add("prueba5");
-        arrayList.add("prueba6");
-
-        gridView = (GridView) findViewById(R.id.elementsGridView);
-        adapter = new GridAdapter(this,arrayList);
-        gridView.setAdapter(adapter);
-
+        gridView = findViewById(R.id.gridView);
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
             }
         });
+
     }
 
 }

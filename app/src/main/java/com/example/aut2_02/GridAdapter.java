@@ -5,44 +5,54 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
-
-import java.util.ArrayList;
 
 public class GridAdapter extends BaseAdapter {
 
-    private Context context;
-    private ArrayList<String> arrayList;
+    Context context;
+    String[] productName;
+    int[] image;
 
-    public GridAdapter(Context context, ArrayList<String> arrayList){
-        this.context=context;
-        this.arrayList=arrayList;
+    LayoutInflater inflater;
+
+    public GridAdapter(Context context, String[] productName, int[] image) {
+        this.context = context;
+        this.productName = productName;
+        this.image = image;
     }
 
     @Override
     public int getCount() {
-        return arrayList.size();
+        return productName.length;
     }
 
     @Override
     public Object getItem(int i) {
-        return arrayList.get(i);
+        return null;
     }
 
     @Override
     public long getItemId(int i) {
-        return i;
+        return 0;
     }
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
-        if(view == null){
-            LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
-            view = layoutInflater.inflate(R.layout.item_grid,null);
+        if(inflater==null){
+            inflater=(LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         }
 
-        TextView titulo = (TextView) view.findViewById(R.id.itemText);
-        titulo.setText(arrayList.get(i));
-        return null;
+        if(view == null){
+            view = inflater.inflate(R.layout.grid_item,null);
+        }
+
+        ImageView imageView = view.findViewById(R.id.grid_image);
+        TextView textView = view.findViewById(R.id.item_name);
+
+        imageView.setImageResource(image[i]);
+        textView.setText(productName[i]);
+
+        return view;
     }
 }
