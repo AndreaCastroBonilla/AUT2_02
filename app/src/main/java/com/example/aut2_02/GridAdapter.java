@@ -10,16 +10,15 @@ import android.widget.TextView;
 
 public class GridAdapter extends BaseAdapter {
 
-    Context context;
-    String[] productName;
-    int[] image;
+    private Context context;
+    private LayoutInflater inflater;
+    private String[] productName;
+    private int[] productImage;
 
-    LayoutInflater inflater;
-
-    public GridAdapter(Context context, String[] productName, int[] image) {
-        this.context = context;
+    public GridAdapter(Context c, String[] productName, int[] image) {
+        context = c;
         this.productName = productName;
-        this.image = image;
+        this.productImage = image;
     }
 
     @Override
@@ -38,21 +37,21 @@ public class GridAdapter extends BaseAdapter {
     }
 
     @Override
-    public View getView(int i, View view, ViewGroup viewGroup) {
+    public View getView(int i, View convertView, ViewGroup viewGroup) {
         if(inflater==null){
             inflater=(LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         }
 
-        if(view == null){
-            view = inflater.inflate(R.layout.grid_item,null);
+        if(convertView == null){
+            convertView = inflater.inflate(R.layout.grid_item,null);
         }
 
-        ImageView imageView = view.findViewById(R.id.grid_image);
-        TextView textView = view.findViewById(R.id.item_name);
+        ImageView imageView = convertView.findViewById(R.id.image_view);
+        TextView textView = convertView.findViewById(R.id.text_view);
 
-        imageView.setImageResource(image[i]);
+        imageView.setImageResource(productImage[i]);
         textView.setText(productName[i]);
 
-        return view;
+        return convertView;
     }
 }
