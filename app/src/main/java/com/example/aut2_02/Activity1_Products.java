@@ -3,6 +3,7 @@ package com.example.aut2_02;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Resources;
@@ -20,13 +21,19 @@ public class Activity1_Products extends AppCompatActivity {
     GridView gridView;
 
     //DATOS DE LOS PRODUCTOS
-    String[] productName = {"Buddha", "Buddha", "Leone", "Leone","Nike","Venum","Venum","Venun"};
-    String[] productDescription = {"Descripción1","Descripción2","Descripción3","Descripción4","Descripción5","Descripción6","Descripción7","Descripción8"};
-    String[] productDescExt = {"D1","D2","D3","D4","D5","D6","D7","D8"};
-    String[] productPrice = {"50,99€", "50,99€", "50,99€", "50,99€","50,99€", "50,99€", "50,99€", "50,99€"};
+   // Context context;
+    //String str = context.getString(R.string.buddha_glovess);
+
+    String[] productName = {"Buddha", "Buddha", "Leone", "Leone","Nike","Venum","Venum","Venun",""};
+    String[] productDescription = {"Pantalón","Guantes","Zapatos","Casco","Zapatos","Vendas","Bucal","Guantes",""};
+    String[] productDescExt = {"D1","D2","D3","D4","D5","D6","D7",
+            "Diseñados para brindar una buena amortiguación en cada impacto y brindar una protección óptima a las articulaciones, gracias a una espuma de triple densidad.\n" +
+            "\nSu sistema de ventilación microperforado facilita la evacuación del sudor y sus puños alargados aportan un confort adicional.\n" +
+            "\nLos guantes de boxeo Phantom son aptos para un uso habitual de 3 a 4 veces por semana, así como para diferentes modalidades de boxeo.",""};
+    String[] productPrice = {"30,90€", "64,90€", "89,90€", "129,90€","94,99€", "8,99€", "14,99€", "89,90€",""};
     int[] productImage = {R.drawable.buddha_shorts, R.drawable.buddha_gloves, R.drawable.leone_shoes,
             R.drawable.leone_casco, R.drawable.nike_shoes, R.drawable.venum_bandages,
-            R.drawable.venum_bucal, R.drawable.venum_gloves};
+            R.drawable.venum_bucal, R.drawable.venum_gloves,R.drawable.dot};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,8 +57,8 @@ public class Activity1_Products extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                // Toast.makeText(getApplicationContext(), "You clicked" + productName[i], Toast.LENGTH_LONG).show();
                 builder.setTitle("DESCRIPCIÓN");
-                builder.setMessage(productDescription[i] + productDescExt[i]);
-                builder.setIcon(R.drawable.about);
+                builder.setMessage(productDescExt[i]);
+                builder.setIcon(R.drawable.info);
                 builder.setNeutralButton("VOLVER", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
