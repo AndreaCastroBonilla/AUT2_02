@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">AUT2_02</string>
+    <string-array name="products">
+        <item> Esto son unos guantes de boxeo.</item>
+       <item> Esto es un ptalón de boxeo.</item>
+        <item> Eso es un pntalón de boxeo.</item>
+        <item> to es un pantalón de boxeo.</item>
+        <item> Esto es un paalón de boeo.</item>
+        <item> Es es un pantalón deboxeo.</item>
+        <item> Esto es un patalón de boxeo.</item>
+        <item> Esto es un ptalón de boxeo.</item>
+    </string-array>
+    <string name="buddha_glovess">Esto son unos guantes de boxeo.</string>
 </resources>
