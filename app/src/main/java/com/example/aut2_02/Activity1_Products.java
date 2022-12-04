@@ -11,6 +11,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Adapter;
 import android.widget.AdapterView;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.Toast;
 
@@ -26,7 +28,20 @@ public class Activity1_Products extends AppCompatActivity {
 
     String[] productName = {"Buddha", "Buddha", "Leone", "Leone","Nike","Venum","Venum","Venun",""};
     String[] productDescription = {"Pantalón","Guantes","Zapatos","Casco","Zapatos","Vendas","Bucal","Guantes",""};
-    String[] productDescExt = {"D1","D2","D3","D4","D5","D6","D7",
+    String[] productDescExt = {
+            "Shorts de Boxeo diseñados utilizando unos nuevos patrones para que el pantalón quede realmente cómodo, tanto para los entrenamientos como para la competición.\n" +"\n"+
+                    "   - Ligeros y cómodos.\n" +
+                    "   - Fabricados en Satén Premium.\n" +
+                    "   - Diseñados para la Competición Amateur.\n" +
+                    "   - Cintura ancha elástica.\n" +
+                    "   - Aperturas en los laterales para una mejor libertad en movimiento.\n" +
+                    "   - Etiqueta bordada.\n",
+            "D2",
+            "D3",
+            "D4",
+            "D5",
+            "D6",
+            "D7",
             "Diseñados para brindar una buena amortiguación en cada impacto y brindar una protección óptima a las articulaciones, gracias a una espuma de triple densidad.\n" +
             "\nSu sistema de ventilación microperforado facilita la evacuación del sudor y sus puños alargados aportan un confort adicional.\n" +
             "\nLos guantes de boxeo Phantom son aptos para un uso habitual de 3 a 4 veces por semana, así como para diferentes modalidades de boxeo.",""};
@@ -70,6 +85,27 @@ public class Activity1_Products extends AppCompatActivity {
             }
         });
 
+        //PASO A LA ACTIVITY "MENÚ"
+        Button menu = findViewById(R.id.menuButton);
+        menu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent (v.getContext(), MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        //PASO A LA ACTIVITY "CESTA"
+        Button list = findViewById(R.id.productosButton);
+        list.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent (v.getContext(), Activity2_List.class);
+                startActivity(intent);
+            }
+        });
+
     }
+
 
 }
