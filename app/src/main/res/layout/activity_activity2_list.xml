@@ -17,19 +17,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
+            android:fontFamily="sans-serif-black"
             android:text="PRECIO"
-            android:textColor="#FFFFFF"
-            android:textSize="24sp">
-        </TextView>
+            android:textColor="#B8B8B8"
+            android:textSize="24sp"></TextView>
 
         <TextView
             android:id="@+id/productosText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
             android:text="PRODUCTOS"
-            android:textColor="#FFFFFF"
-            android:textSize="24sp">
-        </TextView>
+            android:textColor="#B8B8B8"
+            android:textSize="24sp"></TextView>
     </RelativeLayout>
 
     <RelativeLayout
@@ -41,9 +41,10 @@
             android:id="@+id/txtNombre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
             android:hint="nombre"
-            android:textColor="@color/white"
-            android:textColorHint="#FFFFFF"
+            android:textColor="@color/grey"
+            android:textColorHint="#959595"
             android:textSize="24sp"></EditText>
 
         <EditText
@@ -51,9 +52,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/txtNombre"
+            android:fontFamily="sans-serif-light"
             android:hint="cantidad"
-            android:textColor="@color/white"
-            android:textColorHint="#FFFFFF"
+            android:textColor="@color/grey"
+            android:textColorHint="#959595"
             android:textSize="24sp"></EditText>
 
         <EditText
@@ -61,9 +63,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/txtCantidad"
+            android:fontFamily="sans-serif-light"
             android:hint="precio"
-            android:textColor="@color/white"
-            android:textColorHint="#FFFFFF"
+            android:textColor="@color/grey"
+            android:textColorHint="#959595"
             android:textSize="24sp"></EditText>
     </RelativeLayout>
 
@@ -93,16 +96,40 @@
         </Button>
     </RelativeLayout>
 
-
     <ListView
         android:id="@+id/lista"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#00919191"
-        android:backgroundTint="@color/white"></ListView>
+        android:layout_height="450dp"
+        android:background="#7A000000"
+        android:backgroundTint="@color/grey"></ListView>
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
+        <Button
+            android:id="@+id/productosButton"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:alpha="0.5"
+            android:backgroundTint="@color/grey"
+            android:text="ATRÁS"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
 
+        <Button
+            android:id="@+id/contactoButton"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:alpha="0.5"
+            android:backgroundTint="@color/grey"
+            android:text="SIGUIENTE"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+    </RelativeLayout>
 
 
 </LinearLayout>
