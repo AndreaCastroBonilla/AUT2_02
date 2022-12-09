@@ -1,9 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/ativities_background"
     tools:context=".Activity3_Contact">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <EditText
+            android:id="@+id/nombreText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:text="nombre"
+            android:textColor="#959595"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/emailText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nombreText"
+            android:ems="10"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:text="email"
+            android:textColor="#959595"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/asuntoText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/emailText"
+            android:layout_centerHorizontal="true"
+            android:ems="10"
+            android:gravity="center"
+            android:text="asunto"
+            android:textColor="#959595"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/mensajeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/asuntoText"
+            android:layout_centerHorizontal="true"
+            android:ems="10"
+            android:gravity="center"
+            android:text="mensaje"
+            android:textColor="#959595"
+            android:textSize="24sp" />
+
+        <RadioButton
+            android:id="@+id/condicionesButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mensajeText"
+            android:text="Aceptar Términos y Condiciones*"
+            android:textColor="#959595"
+            android:textSize="24sp"></RadioButton>
+
+        <Button
+            android:id="@+id/enviarButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/condicionesButton"
+            android:layout_centerHorizontal="true"
+            android:alpha="0.5"
+            android:backgroundTint="#CCCCCC"
+            android:gravity="center"
+            android:text="ENVIAR"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/cestaButton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:alpha="0.5"
+        android:backgroundTint="@color/grey"
+        android:text="ATRÁS"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:layout_gravity="bottom|left"/>
+
+    <Button
+        android:id="@+id/mainButton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:alpha="0.5"
+        android:backgroundTint="@color/grey"
+        android:text="SIGUIENTE"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:layout_gravity="bottom|right"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CONTACTO"
+        android:textSize="70dp"
+        android:layout_gravity="center_horizontal"/>
+
+</FrameLayout>
