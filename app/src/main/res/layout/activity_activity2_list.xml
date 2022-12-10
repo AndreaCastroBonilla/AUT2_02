@@ -99,7 +99,7 @@
     <ListView
         android:id="@+id/lista"
         android:layout_width="match_parent"
-        android:layout_height="450dp"
+        android:layout_height="393dp"
         android:background="#7A000000"
         android:backgroundTint="@color/grey"></ListView>
 
@@ -109,26 +109,24 @@
 
         <Button
             android:id="@+id/productosButton"
-            android:layout_width="150dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:alpha="0.5"
-            android:backgroundTint="@color/grey"
-            android:text="ATRÁS"
-            android:textColor="@color/black"
-            android:textSize="20dp" />
+            android:background="#00FFFFFF"
+            android:drawableRight="@drawable/arroow"
+            android:text="."
+            android:textColor="@color/black" />
 
         <Button
             android:id="@+id/contactoButton"
-            android:layout_width="150dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
-            android:alpha="0.5"
-            android:backgroundTint="@color/grey"
-            android:text="SIGUIENTE"
-            android:textColor="@color/black"
-            android:textSize="20dp" />
+            android:drawableRight="@drawable/arrow"
+            android:background="#00FFFFFF"
+            android:text="."
+            android:textColor="@color/black"/>
     </RelativeLayout>
 
 

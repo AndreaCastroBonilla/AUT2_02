@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AUT2_02</string>
+    <string name="app_name">BShop</string>
     <string-array name="products">
         <item> Esto son unos guantes de boxeo.</item>
         <item> Esto es un ptalón de boxeo.</item>

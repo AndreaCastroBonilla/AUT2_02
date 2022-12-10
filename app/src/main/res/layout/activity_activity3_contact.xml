@@ -20,8 +20,9 @@
             android:layout_centerHorizontal="true"
             android:ems="10"
             android:gravity="center"
-            android:text="nombre"
-            android:textColor="#959595"
+            android:hint="nombre"
+            android:textColor="@color/grey"
+            android:textColorHint="#959595"
             android:textSize="20sp" />
 
         <EditText
@@ -32,8 +33,9 @@
             android:layout_centerHorizontal="true"
             android:ems="10"
             android:gravity="center"
-            android:text="email"
-            android:textColor="#959595"
+            android:hint="email"
+            android:textColor="@color/grey"
+            android:textColorHint="#959595"
             android:textSize="20sp" />
 
         <EditText
@@ -44,8 +46,9 @@
             android:layout_centerHorizontal="true"
             android:ems="10"
             android:gravity="center"
-            android:text="asunto"
-            android:textColor="#959595"
+            android:hint="asunto"
+            android:textColor="@color/grey"
+            android:textColorHint="#959595"
             android:textSize="20sp" />
 
         <EditText
@@ -56,8 +59,9 @@
             android:layout_centerHorizontal="true"
             android:ems="10"
             android:gravity="center"
-            android:text="mensaje"
-            android:textColor="#959595"
+            android:hint="mensaje"
+            android:textColor="@color/grey"
+            android:textColorHint="#959595"
             android:textSize="20sp" />
 
         <CheckBox
@@ -66,7 +70,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/mensajeText"
             android:text="Aceptar Términos y Condiciones*"
-            android:textColor="#959595"
+            android:textColor="@color/grey"
             android:textSize="20sp"></CheckBox>
 
         <ToggleButton
@@ -77,37 +81,35 @@
             android:layout_centerHorizontal="true"
             android:alpha="0.5"
             android:backgroundTint="#CCCCCC"
+            android:drawableLeft="@drawable/letter"
             android:gravity="center"
             android:textColor="@color/black"
             android:textOff="ENVIAR"
-            android:textSize="20dp"
-            android:onClick="loguearCheckbox"/>
+            android:textSize="20dp" />
 
     </RelativeLayout>
 
     <Button
         android:id="@+id/cestaButton"
-        android:layout_width="150dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:alpha="0.5"
-        android:backgroundTint="@color/grey"
-        android:text="ATRÁS"
-        android:textColor="@color/black"
-        android:textSize="20dp"
         android:gravity="center"
-        android:layout_gravity="bottom|left"/>
+        android:layout_gravity="bottom|left"
+        android:drawableRight="@drawable/arroow"
+        android:background="#00FFFFFF"
+        android:text="."
+        android:textColor="@color/black"/>
 
     <Button
         android:id="@+id/mainButton"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:alpha="0.5"
-        android:backgroundTint="@color/grey"
-        android:text="SIGUIENTE"
-        android:textColor="@color/black"
-        android:textSize="20dp"
+        android:layout_gravity="bottom|right"
         android:gravity="center"
-        android:layout_gravity="bottom|right"/>
+        android:drawableRight="@drawable/arrow"
+        android:background="#00FFFFFF"
+        android:text="."
+        android:textColor="@color/black"/>
 
     <TextView
         android:id="@+id/textView"
@@ -116,6 +118,6 @@
         android:layout_gravity="center_horizontal"
         android:text="CONTACTO"
         android:textSize="60dp"
-        android:fontFamily="sans-serif-black" />
+        android:fontFamily="sans-serif-black"/>
 
 </FrameLayout>

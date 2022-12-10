@@ -29,22 +29,14 @@ public class Activity1_Products extends AppCompatActivity {
     String[] productName = {"Buddha", "Buddha", "Leone", "Leone","Nike","Venum","Venum","Venun",""};
     String[] productDescription = {"Pantalón","Guantes","Zapatos","Casco","Zapatos","Vendas","Bucal","Guantes",""};
     String[] productDescExt = {
-            "Shorts de Boxeo diseñados utilizando unos nuevos patrones para que el pantalón quede realmente cómodo, tanto para los entrenamientos como para la competición.\n" +"\n"+
-                    "   - Ligeros y cómodos.\n" +
-                    "   - Fabricados en Satén Premium.\n" +
-                    "   - Diseñados para la Competición Amateur.\n" +
-                    "   - Cintura ancha elástica.\n" +
-                    "   - Aperturas en los laterales para una mejor libertad en movimiento.\n" +
-                    "   - Etiqueta bordada.\n",
+            "D1",
             "D2",
             "D3",
             "D4",
             "D5",
             "D6",
             "D7",
-            "Diseñados para brindar una buena amortiguación en cada impacto y brindar una protección óptima a las articulaciones, gracias a una espuma de triple densidad.\n" +
-            "\nSu sistema de ventilación microperforado facilita la evacuación del sudor y sus puños alargados aportan un confort adicional.\n" +
-            "\nLos guantes de boxeo Phantom son aptos para un uso habitual de 3 a 4 veces por semana, así como para diferentes modalidades de boxeo.",""};
+            "D8",""};
     String[] productPrice = {"30,90€", "64,90€", "89,90€", "129,90€","94,99€", "8,99€", "14,99€", "89,90€",""};
     int[] productImage = {R.drawable.buddha_shorts, R.drawable.buddha_gloves, R.drawable.leone_shoes,
             R.drawable.leone_casco, R.drawable.nike_shoes, R.drawable.venum_bandages,
