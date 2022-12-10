@@ -46,6 +46,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //MENÚ -> ACTIVIDAD 3
+        next = (Button) findViewById(R.id.contactoButton);
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this,Activity3_Contact.class);
+                startActivity(i);
+            }
+        });
+
         //DECLARAR E INSTANCIAR EL DIÁLOGO QUE EMERGERÁ AL PULSAR "ABOUT"
         ImageButton about = (ImageButton) findViewById(R.id.aboutButton);
 

@@ -10,35 +10,35 @@
 
     <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="439dp"
         android:layout_gravity="center">
 
         <EditText
             android:id="@+id/nombreText"
-            android:layout_width="wrap_content"
+            android:layout_width="370dp"
             android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
             android:ems="10"
             android:gravity="center"
-            android:layout_centerHorizontal="true"
             android:text="nombre"
             android:textColor="#959595"
-            android:textSize="24sp" />
+            android:textSize="20sp" />
 
         <EditText
             android:id="@+id/emailText"
-            android:layout_width="wrap_content"
+            android:layout_width="370dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/nombreText"
+            android:layout_centerHorizontal="true"
             android:ems="10"
             android:gravity="center"
-            android:layout_centerHorizontal="true"
             android:text="email"
             android:textColor="#959595"
-            android:textSize="24sp" />
+            android:textSize="20sp" />
 
         <EditText
             android:id="@+id/asuntoText"
-            android:layout_width="wrap_content"
+            android:layout_width="370dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/emailText"
             android:layout_centerHorizontal="true"
@@ -46,30 +46,30 @@
             android:gravity="center"
             android:text="asunto"
             android:textColor="#959595"
-            android:textSize="24sp" />
+            android:textSize="20sp" />
 
         <EditText
             android:id="@+id/mensajeText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="372dp"
+            android:layout_height="148dp"
             android:layout_below="@+id/asuntoText"
             android:layout_centerHorizontal="true"
             android:ems="10"
             android:gravity="center"
             android:text="mensaje"
             android:textColor="#959595"
-            android:textSize="24sp" />
+            android:textSize="20sp" />
 
-        <RadioButton
+        <CheckBox
             android:id="@+id/condicionesButton"
-            android:layout_width="wrap_content"
+            android:layout_width="374dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/mensajeText"
             android:text="Aceptar Términos y Condiciones*"
             android:textColor="#959595"
-            android:textSize="24sp"></RadioButton>
+            android:textSize="20sp"></CheckBox>
 
-        <Button
+        <ToggleButton
             android:id="@+id/enviarButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -78,9 +78,10 @@
             android:alpha="0.5"
             android:backgroundTint="#CCCCCC"
             android:gravity="center"
-            android:text="ENVIAR"
             android:textColor="@color/black"
-            android:textSize="20dp" />
+            android:textOff="ENVIAR"
+            android:textSize="20dp"
+            android:onClick="loguearCheckbox"/>
 
     </RelativeLayout>
 
@@ -112,8 +113,9 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:text="CONTACTO"
-        android:textSize="70dp"
-        android:layout_gravity="center_horizontal"/>
+        android:textSize="60dp"
+        android:fontFamily="sans-serif-black" />
 
 </FrameLayout>
