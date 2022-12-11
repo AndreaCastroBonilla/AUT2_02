@@ -1,5 +1,6 @@
 package com.example.aut2_02;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
@@ -7,6 +8,9 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.ContextMenu;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -86,7 +90,11 @@ public class Activity2_List extends AppCompatActivity {
         btnEliminar.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                items.remove(txtNombre.getText().toString());
+                if(items.size()>0){
+                    items.remove(items.size()-1);
+                }else {
+                    Toast.makeText(getApplicationContext(), "¡LISTA VACÍA!", Toast.LENGTH_LONG).show();
+                }
                 adapter.notifyDataSetChanged();
             }
         });

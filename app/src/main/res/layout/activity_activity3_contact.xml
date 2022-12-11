@@ -81,7 +81,7 @@
             android:layout_centerHorizontal="true"
             android:alpha="0.5"
             android:backgroundTint="#CCCCCC"
-            android:drawableLeft="@drawable/letter"
+            android:drawableLeft="@drawable/gmail"
             android:gravity="center"
             android:textColor="@color/black"
             android:textOff="ENVIAR"

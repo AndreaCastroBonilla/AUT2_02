@@ -1,5 +1,6 @@
 package com.example.aut2_02;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +9,8 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Adapter;
 import android.widget.AdapterView;
@@ -23,7 +26,7 @@ public class Activity1_Products extends AppCompatActivity {
     GridView gridView;
 
     //DATOS DE LOS PRODUCTOS
-   // Context context;
+    // Context context;
     //String str = context.getString(R.string.buddha_glovess);
 
     String[] productName = {"Buddha", "Buddha", "Leone", "Leone","Nike","Venum","Venum","Venun",""};
@@ -62,7 +65,7 @@ public class Activity1_Products extends AppCompatActivity {
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-               // Toast.makeText(getApplicationContext(), "You clicked" + productName[i], Toast.LENGTH_LONG).show();
+                // Toast.makeText(getApplicationContext(), "You clicked" + productName[i], Toast.LENGTH_LONG).show();
                 builder.setTitle("DESCRIPCIÓN");
                 builder.setMessage(productDescExt[i]);
                 builder.setIcon(R.drawable.info);
